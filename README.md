@@ -36,7 +36,7 @@ ingest.py: Main script to process transcripts and upload to Cosmos DB.
 .env: Stores sensitive environment variables.
 requirements.txt: Lists Python dependencies.
 
-salesforce-rag-azure/
+sf-rag-project/
 ├── app.py
 ├── ingest.py
 ├── scripts/
