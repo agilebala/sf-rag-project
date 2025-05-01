@@ -27,6 +27,33 @@ Prerequisites
 5.  pip:** Python package installer.
 6.  Salesforce Earnings Call Transcripts:** Downloaded and saved as individual `.txt` files in a local folder.
 
+**Create a New Conda Environment with a Specific Python Version:**
+
+Create a new conda environment and specify which version of Python you want to use (for example, Python 3.10).
+conda create -n rag-env python=3.10
+This command will create a new environment named rag-env with Python 3.10.
+
+
+**Activate the New Environment:**
+
+conda activate rag-env
+
+**Install the Required Packages:**
+
+conda install -c conda-forge streamlit
+conda install -c conda-forge openai
+conda install -c conda-forge azure-cosmos
+conda install python-dotenv
+These commands will install the following:
+
+Streamlit for the app interface
+
+OpenAI for interacting with the OpenAI API
+
+Azure Cosmos SDK to interact with Azure Cosmos DB
+
+python-dotenv for loading environment variables from a .env file
+
 **File Descriptions: **
 
 data/: Contains the Salesforce transcript .txt files.
@@ -93,6 +120,7 @@ This script will:
  This script orchestrates the process of reading, chunking, embedding, and storing the transcript data in Azure Cosmos DB.
 
 5.  Running the Conversational UI:
+    This script builds a Q&A web app using Streamlit for analyzing Salesforce earnings call transcripts. It uses RAG (Retrieval-Augmented Generation)	
     Run the Streamlit Application: Navigate to the project directory in your terminal and run:
     ```bash
     streamlit run app.py
